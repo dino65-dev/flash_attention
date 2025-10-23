@@ -32,8 +32,8 @@ FlashAttention computes attention without materializing the full N×N attention 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/flash-attention-cuda.git
-cd flash-attention-cuda
+git clone https://github.com/dino65-dev/flash_attention.git
+cd flash_attention
 ```
 
 ### 2. Create virtual environment (recommended)
