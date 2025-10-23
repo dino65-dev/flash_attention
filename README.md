@@ -166,17 +166,6 @@ All accumulations use atomic operations for thread safety.
 - **Paper**: [FlashAttention: Fast and Memory-Efficient Exact Attention](https://arxiv.org/abs/2205.14135) (Dao et al., 2022)
 - **Official Implementation**: [github.com/Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention)
 
-## � Citation
-
-```bibtex
-@inproceedings{dao2022flashattention,
-  title={FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness},
-  author={Dao, Tri and Fu, Daniel Y. and Ermon, Stefano and Rudra, Atri and R{\'e}, Christopher},
-  booktitle={NeurIPS},
-  year={2022}
-}
-```
-
 ## � License
 
 MIT License
