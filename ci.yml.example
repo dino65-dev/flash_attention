@@ -1,0 +1,40 @@
+# GitHub Actions CI example (optional)
+# 
+# Note: This project requires CUDA/GPU to build and test.
+# GitHub Actions free tier doesn't provide GPU runners.
+# 
+# For CI/CD, consider:
+# - Self-hosted runners with GPU
+# - GPU-enabled CI services (e.g., Paperspace, Lambda Labs)
+# - CPU-only build tests (compile check only)
+#
+# To enable, rename this file to .github/workflows/ci.yml
+
+name: Build Check
+
+on: [push, pull_request]
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Check Python syntax
+        run: |
+          python -m py_compile flash_attention.py
+      - name: Check CUDA syntax (if CUDA available)
+        run: |
+          if command -v nvcc &> /dev/null; then
+            nvcc --version
+            # Add actual compilation test here if GPU available
+          else
+            echo "CUDA not available, skipping GPU tests"
+          fi
