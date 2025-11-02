@@ -17,7 +17,6 @@
  * Limitations of this implementation:
  * - Only supports head_dim=64
  * - Only supports FP32 (no FP16/BF16)
- * - No backward pass for training (under development)
  * - Fixed block sizes (Br=32, Bc=32)
  */
 
