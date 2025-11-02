@@ -12,7 +12,7 @@
  * 
  * Current Status:
  * - Forward pass: ✅ Fully implemented and tested
- * - Backward pass: ⚠️ IN PROGRESS - DO NOT USE (kernel launch issues)
+ * - Backward pass: ✅ Fully implemented and tested
  * 
  * Limitations of this implementation:
  * - Only supports head_dim=64
